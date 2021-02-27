@@ -1,0 +1,9 @@
+.center{
+    text-align: center;
+}
+
+.clearH1{
+    font-family: var(--title-font-family);
+    font-size: 60px;
+    color: white;
+}

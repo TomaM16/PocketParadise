@@ -1,0 +1,42 @@
+header{
+    height: 6em;
+}
+header img{
+    margin-top: -0.3em;
+    animation: img2 1s ease-in-out forwards;
+}
+.input{
+    width: 100px;
+}
+.container form{
+    width: 600px;
+    position: absolute;
+    left: 15em;
+    top: 5em;
+}
+.container form h1{
+    color: white;
+    font-family: var(--jos-font-family);
+    font-weight: bold;
+}
+.container form button{
+    width: 100%;
+}
+#send{
+    font-size: 18px;
+    font-family: var(--jos-font-family);
+    padding: 15px 0 10px 0;
+}
+
+.col-4 li{
+    width: 400px;
+    font-size: 18px;
+    margin-left: 2em;
+}
+.col-4 ul{
+    margin-top: 8.5em;
+}
+.col-4 li i{
+    margin-right: 10px;
+}
+
