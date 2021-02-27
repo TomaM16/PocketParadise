@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Oxanium:400,700|Trade+Winds|Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
+@import url('variables.css');
+@import url('animations.css');
+@import url('about.css');
+@import url('hoverover.css');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    font-family: var(--default-font-family);
+    font-size: var(--desktop-font-size);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    animation: header 15s ease-in-out infinite;
+}
+nav {
+    overflow: hidden;
+    background: transparent;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+nav .a:nth-child(2){margin-left: 25%;}
+
+nav .a:hover{
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid var(--primary-color);
+}
+nav .social{
+    margin-left: 5px;
+    margin-right: 10px;
+    float: right;
+    padding: 20px 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+nav img{
+    margin: 5px;
+    float: left;
+    height: 5em;
+    animation: img 1s ease-in-out 0s forwards;
+}
+
+.bottom{
+    position:absolute; 
+    bottom: 3em;
+    left: 4em;
+}
+
+.bottom h4{
+    color: var(--primary-color);
+    font-family: var(--title-font-family);
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: bottom 1s ease-in-out 0.6s forwards;
+}
+
+.bottom h1{
+    color: white;
+    font-family: var(--jos-font-family);
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: bottom 1s ease-in-out 0.2s forwards;
+}
+
+.bottom button{
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    padding: 15px 100px;
+    opacity: 0;
+    animation: inside-out 1s ease-in-out 0.4s forwards;
+}
+
+.bottom div{
+    width: 88vw;
+}
+
+.bottom input{
+    float: right;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    padding: 15px 23px;
+    cursor: pointer;
+    opacity: 0;
+    animation: inside-out 1s ease-in-out 0.4s forwards;
+}
+.bottom input:focus, button:focus{
+    outline: none;
+}
+
+@media (min-width: 1000px){
+    .mobile{
+        display: none;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1400px){
+    nav .a:nth-child(2){margin-left: 20%;}
+}
+@media (min-width: 1000px) and (max-width: 1200px){
+    nav .a:nth-child(2){margin-left: 3%;}
+}
+@media (max-width: 500px){
+    .mobile{
+        display: none;
+    }
+    nav .a {
+        font-family: var(--jos-font-family);
+        float: left;
+        padding: 10px 0px;
+        width: 100%;
+        font-size: 16px;
+        text-decoration: none;
+        color: white;
+        text-align: right;
+        opacity: 0;
+    }
+    nav .a:nth-child(2){margin-left: 0%;}
+
+    nav .a:nth-child(2){animation: right 1s ease-in-out 0.0s forwards;}
+    nav .a:nth-child(3){animation: right 1s ease-in-out 0.2s forwards;}
+    nav .a:nth-child(4){animation: right 1s ease-in-out 0.4s forwards;}
+    nav .a:nth-child(5){animation: right 1s ease-in-out 0.6s forwards;}
+    nav .a:nth-child(6){animation: right 1s ease-in-out 0.8s forwards;}
+
+    nav .social{
+        display: none;
+    }
+    header nav img{
+        position: absolute;
+        float: left;
+        top: 1em;
+        left: 1em;
+    }
+    
+    .bottom{
+        position:absolute; 
+        bottom: 1em;
+        left: 1em;
+    }
+    
+    .bottom h4{
+        color: var(--primary-color);
+        font-family: var(--title-font-family);
+        letter-spacing: 5px;
+        opacity: 0;
+        animation: bottom 1s ease-in-out 0.6s forwards;
+    }
+    
+    .bottom h1{
+        color: white;
+        font-family: var(--jos-font-family);
+        font-size: 35px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: bottom 1s ease-in-out 0.2s forwards;
+    }
+    
+    .bottom button{
+        border: none;
+        background: var(--primary-color);
+        color: white;
+        font-size: 18px;
+        padding: 15px 100px;
+        opacity: 0;
+        animation: inside-out 1s ease-in-out 0.4s forwards;
+    }
+    .bottom input{
+        display: none;
+    }
+}
+@media (min-width: 500px) and (max-width: 1000px){
+    header{
+        display: none;
+    }
+    .mobile{
+        text-align: center;
+        padding: 1em;
+    }
+    .mobile img{
+        height: 10em;
+    }
+}
+@media (min-width: 1000px){
+    nav .a {
+        font-family: var(--jos-font-family);
+        margin-left: 20px;
+        margin-right: 20px;
+        float: left;
+        padding: 20px 0px 0px 0px;
+        font-size: 17px;
+        text-decoration: none;
+        height: 1.5em;
+        color: white;
+        border-bottom: 2px solid transparent;
+        transform: translateY(-5em);
+    }
+
+    nav .a:nth-child(2){animation: navbar 3s ease-in-out 0.0s forwards;}
+    nav .a:nth-child(3){animation: navbar 3s ease-in-out 0.1s forwards;}
+    nav .a:nth-child(4){animation: navbar 3s ease-in-out 0.2s forwards;}
+    nav .a:nth-child(5){animation: navbar 3s ease-in-out 0.3s forwards;}
+    nav .a:nth-child(6){animation: navbar 3s ease-in-out 0.4s forwards;}
+    /**/
+    nav .social:nth-child(7){animation: social 1s ease-in-out 3.0s forwards;}
+    nav .social:nth-child(8){animation: social 1s ease-in-out 2.8s forwards;}
+    nav .social:nth-child(9){animation: social 1s ease-in-out 2.6s forwards;}
+    nav .social:nth-child(10){animation: social 1s ease-in-out 2.4s forwards;}
+    nav .social:nth-child(11){animation: social 1s ease-in-out 2.2s forwards;}
+}
+
+@media (max-width:350px){
+    .bottom h1{
+        font-size: 30px;
+    }
+    .bottom button{
+        font-size: 16px;
+        padding: 15px 90px;
+    }
+}
+
+.allrights{
+    color: rgba(255, 255, 255, 0.349);
+    position: absolute;
+    font-size: 18px;
+    bottom: 10px;
+    right: 10px;
+}
