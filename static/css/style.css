@@ -169,6 +169,10 @@ nav img {
     nav .a:nth-child(6) {
         animation: right 1s ease-in-out 0.8s forwards;
     }
+    nav .a:nth-child(7) {
+        animation: right 1s ease-in-out 1s forwards;
+    }
+
     nav .social {
         display: none;
     }
@@ -255,6 +259,11 @@ nav img {
     nav .a:nth-child(6) {
         animation: navbar 3s ease-in-out 0.4s forwards;
     }
+    /* addition */
+    nav .a:nth-child(7) {
+        animation: navbar 3s ease-in-out 0.5s forwards;
+    }
+    /* --------- */
     /**/
     nav .social:nth-child(7) {
         animation: social 1s ease-in-out 3.0s forwards;
@@ -360,6 +369,10 @@ body {
     background-color: #fff;
 }
 
+#generic_price_table .generic_content:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+}
+
 #generic_price_table .generic_content .generic_head_price {
     background-color: #f6f6f6;
 }
@@ -396,10 +409,10 @@ body {
     color: #414141;
 }
 
-#generic_price_table .generic_content .generic_feature_list ul li:hover {
-    background-color: #E4E4E4;
-    border-left: 5px solid d853f;
-}
+/*#generic_price_table .generic_content .generic_feature_list ul li:hover {*/
+/*    background-color: #E4E4E4;*/
+/*    border-left: 5px solid d853f;*/
+/*}*/
 
 #generic_price_table .generic_content .generic_price_btn a {
     border: 1px solid #0d853f;
@@ -785,7 +798,7 @@ body {
     height: 500px;
     background-color: #FFF;
     border-radius: 10px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0, 1);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     overflow: hidden;
     display: grid;
@@ -831,7 +844,7 @@ input {
 }
 
 textarea.input {
- 
+
     border: 2px solid #fafafa;
     border-radius: 25px;
     padding: 0.8rem 1.2rem;
@@ -840,7 +853,7 @@ textarea.input {
     overflow-y: auto;
     background: none;
     outline: 0;
-   
+
 }
 
 .input-container label {
@@ -860,7 +873,7 @@ textarea.input {
 .input-container.textarea label{
     top: 1rem;
     transform: translateY(0);
-    
+
 }
 
 .btn {
@@ -880,5 +893,3 @@ textarea.input {
     color:#fff;
     border: 2px solid white;
 }
-
-
