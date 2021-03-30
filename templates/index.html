@@ -8,7 +8,8 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/all.css">
     <link rel="stylesheet" href="../static/css/style.css">
-{#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">#}
+    {#
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">#}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
     <link rel="shortcut icon" href="../../static/images/logo_inverted_transparent.png" type="image/x-icon">
@@ -20,7 +21,7 @@
         scroll-behavior: smooth;
     }
 
-    body{
+    body {
         overflow-x: hidden;
     }
 </style>
@@ -37,7 +38,7 @@
             <a class="a" href="#pricing" style="height: 3em;">PRICING</a>
             <a class="a" href="#contacts" style="height: 3em;">CONTACTS</a>
             <a class="a" href="#" style="height: 3em;">FORUM</a>
-            <a class="a" href="#" style="height: 3em;" title="My account"><i class="far fa-user"></i></a>
+            <a class="a" href="login.html" style="height: 3em;" title="My account"><i class="far fa-user"></i></a>
             <a class="a" href="#" style="height: 3em;" title="My plants"><i class="fas fa-seedling"></i></a>
 
             <a class="social" href="#"><i class="fab fa-twitter"></i></a>
@@ -105,7 +106,7 @@
                         <div class="price-heading clearfix">
                             <h1>PRICING</h1>
                         </div>
-                      
+
                         <!--//PRICE HEADING END-->
                     </div>
                 </div>
@@ -121,22 +122,22 @@
 
                             <!--HEAD PRICE DETAIL START-->
                             <div class="generic_head_price clearfix">
-                                <div class="generic_head_content clearfix">                       
+                                <div class="generic_head_content clearfix">
                                     <div class="head_bg"></div>
                                     <div class="head">
                                         <span>Basic</span>
                                     </div>
-                           
+
                                 </div>
                                 <div class="generic_price_tag clearfix">
                                     <span class="price">
                                         <span class="sign">$</span>
                                         <span class="currency">49</span>
                                         <span class="cent">.99</span>
-                                        
+
                                     </span>
                                 </div>
-                               
+
                             </div>
                             <!--//HEAD PRICE DETAIL END-->
 
@@ -190,7 +191,7 @@
                                         <span class="sign">$</span>
                                         <span class="currency">64</span>
                                         <span class="cent">.99</span>
-                                      
+
                                     </span>
                                 </div>
                                 <!--//PRICE END-->
@@ -247,7 +248,7 @@
                                         <span class="sign">$</span>
                                         <span class="currency">99</span>
                                         <span class="cent">.99</span>
-                                        
+
                                     </span>
                                 </div>
                                 <!--//PRICE END-->
@@ -279,39 +280,84 @@
                     </div>
                 </div>
                 <!--//BLOCK ROW END-->
-     </div>
-       </section>     
+            </div>
+        </section>
     </div>
 
-        
-        <div class="container-1" id= "contacts">
-           <div class="form">
-               <div class="contact-info"></div>
 
-               <div class="contact-form"> 
+    <div class="container-1" id="contacts"> 
+        <span class="big-circle"></span>
+        <img src="../img/shape.png" class="square" alt="" />
+        <div class="form">
+      
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text"> The term originally referred to messages sent using the Short Message Service (SMS).
+
+                </p>
+                <div class="info">
+                    <div class="information">
+                        <img src="../img/location.jpg" class="icon" alt="">
+                        <p>Sofia Lozentz</p>
+
+                    </div>
+                    <div class="information">
+                        <img src="../img/email.png" class="icon" alt="">
+                        <p>pocketparadise@gmail.com</p>
+
+                    </div>
+                    <div class="information">
+                        <img src="../img/phone.png" class="icon" alt="">
+                        <p>+359 999 999 999</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <p>Connect with us:</p>
+                    <div class="social-icon">
+                        <a><i style="color:white" class="fab fa-facebook"></i></a>
+                        <a><i style="color:white" class="fab fa-instagram"></i></a>
+                        <a><i style="color:white" class="fab fa-twitter"></i></a>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
                 <form action="#">
                     <h3 class="title-c">CONTACT US</h3>
-                    <div class="input-container">
+                    <div class="input-container ">
                         <input type="text" name="name" class="input">
                         <label for="">Username</label>
+                        <span>Username</span>
                     </div>
                     <div class="input-container">
-                       <input type="email" name="email" class="input">
-                       <label for="">Email</label>
-                   </div>
-                   <div class="input-container">
-                       <input type="tel" name="phone" class="input">
-                       <label for="">Phone</label>
-                   </div>
+                        <input type="email" name="email" class="input">
+                        <label for="">Email</label>
+                        <span>Email</span>
+
+                    </div>
+                    <div class="input-container ">
+                        <input type="tel" name="phone" class="input">
+                        <label for="">Phone</label>
+                        <span>Photos</span>
+
+                    </div>
                     <div class="input-container textarea">
                         <textarea class="input" cols="28" type="massage"></textarea>
                         <label for="">Message</label>
+                        <span>Message</span>
+
                     </div>
-                  <input type="submit" value="Send" class="btn"/>
+                    <input type="submit" value="Send" class="btn" />
                 </form>
-               </div>
-           </div>
+            </div>
         </div>
+    </div>
+    <script src="../js/main.js"></script>
 </body>
 <script src="../static/JavaScript/main.js"></script>
+
 </html>
