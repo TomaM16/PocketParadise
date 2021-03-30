@@ -1,42 +1,32 @@
-from flask import Flask, render_template, session, redirect, url_for, request, flash
-from flask_sqlalchemy import SQLAlchemy
+import uuid
 import os
+
+from flask import Flask
+from flask import render_template, request, redirect, make_response, url_for
+from flask_login import login_user, login_required, current_user, logout_user
+from werkzeug.middleware.shared_data import SharedDataMiddleware
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user, LoginManager, current_user, login_required, logout_user
-from flask_security import UserMixin
-import datetime
+from werkzeug.utils import secure_filename
+
+from database import db_session, init_db
+from login import login_manager
+from models import User
 
 app = Flask(__name__)
-app.secret_key = "teenovator_PocketParadise"
-#login_manager = LoginManager(app)
 
-file_path = os.path.abspath(os.getcwd())+"/PocketParadise.db"
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + file_path
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
+app.secret_key = "ssucuuh398nuwetubr33rcuhne"
 
-'''class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100), nullable=False, unique=True)
-    email = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(200), nullable=False)
+login_manager.init_app(app)
+init_db()
 
-    def __init__(self, username, email, password):
-        self.username = username
-        self.email = email
-        self.password = generate_password_hash(password)
-
-    def is_active(self):
-        return True
-'''
-db.create_all()
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-@app.route('/myPlants', methods=['POST'])
+@app.route('/my_plants', methods=['POST'])
+@login_required
 def my_plants():
     json_file = request.get_json()
     sensor = json_file['sensor']
@@ -44,55 +34,47 @@ def my_plants():
 
     return 'OK'
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == "POST":
-        username = request.form.get('login_username')
-        password = request.form.get('login_password')
+    response = None
+    if request.method == 'GET':
+        response = make_response(render_template('login.html'))
+    else:
+        response = make_response(redirect(url_for('myaccount')))
 
-        user = User.query.filter_by(username=username).first()
-
-        if user and check_password_hash(user.password, password):
+        user = User.query.filter_by(username=request.form['login_username']).first()
+        if user and check_password_hash(user.password, request.form['login_password']):
+            user.login_id = str(uuid.uuid4())
+            db_session.commit()
             login_user(user)
-            return redirect(url_for('user', username=current_user.username))
-        else:
-            flash('Invalid password!', 'error')
-            return redirect(url_for('login'))
-    else:
-        return render_template("login.html")
+    return response
 
-@app.route('/register', methods=['POST', 'GET'])
+
+@app.route('/register', methods=['POST'])
 def register():
-    if request.method == 'POST':
-        email = request.form.get('email')
-        name = request.form.get('username')
-        password = request.form.get('password')
-        confirm_password = request.form.get('confirm_password')
+    # if request.method == 'GET':
+    #     return render_template('register.html')
+    # else:
+    username = request.form['register_username']
+    password = generate_password_hash(request.form['register_password'])
 
-        user = User.query.filter_by(email=email).first()
-        user1 = User.query.filter_by(username=name).first()
+    user = User(username=username, password=password)
+    db_session.add(user)
+    db_session.commit()
+    return redirect(url_for('login'))
 
-        if user:
-            flash('This email exists!', 'error')
-            return redirect(url_for('register'))
-        elif user1:
-            flash('This username exists!', 'error')
-            return redirect(url_for('register'))
-        elif password != confirm_password:
-            flash('Your passwords are not the same!', 'error')
-            return redirect(url_for('register'))
-        elif len(email) == 0 or len(name) == 0 or len(password) == 0 or len(confirm_password) == 0:
-            flash('You are trying to add an empty margin!', 'error')
-            return redirect(url_for('register'))
 
-        else:
-            new_user = User(name, email, password)
-            db.session.add(new_user)
-            db.session.commit()
-            return redirect(url_for("login"))
+@app.route('/myaccount', methods=['GET', 'POST'])
+@login_required
+def myaccount():
+    return render_template('myaccount.html')
 
-    else:
-        return render_template("register.html")
+
+@app.route('/checkout', methods=['GET', 'POST'])
+@login_required
+def checkout():
+    return render_template('checkout.html')
 
 
 if __name__ == '__main__':
