@@ -42,7 +42,7 @@ form {
 
 .login-content h2 {
 	margin: 15px 0;
-	color: rgb(0, 0, 0);
+	color: #fafafa;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 	text-align: center;
@@ -54,7 +54,7 @@ form {
 	grid-template-columns: 7% 93%;
 	margin: 25px 0;
 	padding: 5px 0;
-	border-bottom: 2px solid #030303;
+	border-bottom: 2px solid #fafafa;
 }
 
 .login-content .input-div.one {
@@ -62,7 +62,7 @@ form {
 }
 
 .i {
-	color: #050505;
+	color: #fafafa;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -82,7 +82,7 @@ form {
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: rgb(13, 14, 13);
+	color: #fafafa;
 	font-size: 18px;
 	transition: .3s;
 }
@@ -129,7 +129,7 @@ form {
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: rgb(8, 8, 8);
+	color:#fafafa;
 	font-family: 'poppins', sans-serif;
 }
 
@@ -141,7 +141,7 @@ a {
 	display: block;
 	text-align: right;
 	text-decoration: none;
-	color: rgb(10, 10, 10);
+	color:#fafafa;
 	font-size: 0.9rem;
 	transition: .3s;
 }
@@ -225,6 +225,7 @@ a:hover {
 	align-items: center;
 	text-align: center;
 	margin-left: 10em;
+	margin-top: -30px;
 }
 
 
@@ -237,7 +238,7 @@ form {
 
 .register-content h2 {
 	margin: 15px 0;
-	color: rgb(0, 0, 0);
+	color: #fafafa;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 	text-align: center;
@@ -250,7 +251,7 @@ form {
 	grid-template-columns: 7% 93%;
 	margin: 25px 0;
 	padding: 5px 0;
-	border-bottom: 2px solid #030303;
+	border-bottom: 2px solid #fafafa;
 }
 
 .register-content .input-div.two {
@@ -258,7 +259,7 @@ form {
 }
 
 .i {
-	color: #050505;
+	color: #fafafa;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -278,7 +279,7 @@ form {
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: rgb(13, 14, 13);
+	color:#fafafa8e;
 	font-size: 18px;
 	transition: .3s;
 }
@@ -325,7 +326,7 @@ form {
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: rgb(8, 8, 8);
+	color:#fafafab6;
 	font-family: 'poppins', sans-serif;
 }
 
@@ -337,7 +338,7 @@ a {
 	display: block;
 	text-align: right;
 	text-decoration: none;
-	color: rgb(10, 10, 10);
+	color: #fafafa;
 	font-size: 0.9rem;
 	transition: .3s;
 }
@@ -346,7 +347,7 @@ a:hover {
 	color: #fcf8f8;
 }
 
-.btn {
+.btn-a {
 	display: block;
 	width: 100%;
 	height: 50px;
