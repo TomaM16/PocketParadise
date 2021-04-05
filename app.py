@@ -25,7 +25,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/my_plants', methods=['POST'])
+@app.route('/myPlants', methods=['POST'])
 @login_required
 def my_plants():
     json_file = request.get_json()
@@ -65,7 +65,7 @@ def register():
     return redirect(url_for('login'))
 
 
-@app.route('/myaccount', methods=['GET', 'POST'])
+@app.route('/myAccount', methods=['GET', 'POST'])
 @login_required
 def myaccount():
     return render_template('myaccount.html')
@@ -75,6 +75,10 @@ def myaccount():
 @login_required
 def checkout():
     return render_template('checkout.html')
+
+@app.route('/forumTopics', methods=['GET', 'POST'])
+def forum_topics():
+    return render_template('forum.html')
 
 
 if __name__ == '__main__':
