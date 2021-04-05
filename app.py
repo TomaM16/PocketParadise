@@ -67,7 +67,7 @@ def register():
 
 @app.route('/myAccount', methods=['GET', 'POST'])
 @login_required
-def myaccount():
+def my_account():
     return render_template('myaccount.html')
 
 
@@ -76,9 +76,17 @@ def myaccount():
 def checkout():
     return render_template('checkout.html')
 
+
 @app.route('/forumTopics', methods=['GET', 'POST'])
 def forum_topics():
     return render_template('forum.html')
+
+
+@app.route('/<topic_name/like>', method=['POST'])
+@login_required
+def like(topic_id, user_id):
+    if request.method == 'POST':
+        topic = Topic.query.filter_by(topic_id=topic_id)
 
 
 if __name__ == '__main__':

@@ -13,6 +13,7 @@ class User(Base):
     username = Column(String(80), unique=True, nullable=False)
     password = Column(String(120), nullable=False)
     login_id = Column(String(36), nullable=True)
+    topic = relationship('topic')
 
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)
@@ -34,3 +35,15 @@ class User(Base):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+
+class Topic(Base):
+    id = Column(Integer, primary_key=True)
+    name = Column(String(100), unique=True, nullable=False)
+    description = Column(String(150), nullable=False)
+    user_id = Column(Integer, ForeignKey('User.id'))
+
+
+class Comment(Base):
+    id = Column(Integer, primary_key=True)
+    text = Column(String(300), nullable=False)
