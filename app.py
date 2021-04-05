@@ -82,12 +82,12 @@ def forum_topics():
     return render_template('forum.html')
 
 
-@app.route('/<topic_name/like>', method=['POST'])
+'''@app.route('/<topic_name/like>', method=['POST'])
 @login_required
 def like(topic_id, user_id):
     if request.method == 'POST':
         topic = Topic.query.filter_by(topic_id=topic_id)
-
+'''
 
 if __name__ == '__main__':
     app.run(debug=True, port=80, host='0.0.0.0')

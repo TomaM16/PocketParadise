@@ -37,7 +37,7 @@ class User(Base):
         return '<User %r>' % self.username
 
 
-class Topic(Base):
+'''class Topic(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(100), unique=True, nullable=False)
     description = Column(String(150), nullable=False)
@@ -47,3 +47,4 @@ class Topic(Base):
 class Comment(Base):
     id = Column(Integer, primary_key=True)
     text = Column(String(300), nullable=False)
+'''
