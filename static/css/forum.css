@@ -91,3 +91,33 @@ body {
 h1 {
   font-size: 27px;
 }
+.sub-menu-1 {
+  display: none;
+}
+li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  background: white;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+ li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+}
+ li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted white;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+ li:hover .sub-menu-1 ul li:last-child {
+  border-bottom: none;
+}
+
+ ul li:hover .sub-menu-1 ul li a:hover {
+  color:white;
+}
