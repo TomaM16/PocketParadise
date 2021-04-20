@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login or Register</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style-log.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="login-content">
+			<form action="/login" method="post">
+				
+				<h2 class="title" style="color: rgba(218, 211, 211, 0.993);">Login</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input" name="login_username">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" name="login_password">
+            	   </div>
+            	</div>
+            	<a href="#" style="color: rgba(218, 211, 211, 0.993);">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+		
+		<div class="register-content">
+			<form action="/register" method="post">
+				
+				<h2 class="title-a" style="color: rgba(218, 211, 211, 0.993);">Registration</h2>
+           		<div class="input-div two">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input" name="register_username">
+           		   </div>
+           		</div>
+           		<div class="input-div pas">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" name="register_password">
+            	   </div>
+				  
+            	</div>
+				<a href="#" style="color: rgba(218, 211, 211, 0.993);"><br></a>
+            	<input type="submit" class="btn" value="Register">
+				
+            </form>	
+			
+        </div>
+	
+    </div>
+	<div class="container-1">
+		
+    </div>
+    <script type="text/javascript" src="../static/JavaScript/main2.js"></script>
+</body>
+</html>

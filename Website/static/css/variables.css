@@ -1,0 +1,11 @@
+:root {
+    --title-font-family: 'Oxanium';
+    --default-font-family: 'Ubuntu';
+    --paragraph-font-family: 'Varela Round', sans-serif;
+    --jos-font-family: 'Josefin Sans', sans-serif;
+
+    --desktop-font-size: 20px;
+    --mobile-font-size: 16px;
+
+    --primary-color: #00BF60;
+}
